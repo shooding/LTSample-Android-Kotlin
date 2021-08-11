@@ -16,6 +16,7 @@ import com.loftechs.sample.base.BaseContract
 import com.loftechs.sample.call.create.CreateCallFragment
 import com.loftechs.sample.chat.create.CreateChannelFragment
 import com.loftechs.sample.common.picker.PickerFragment
+import com.loftechs.sample.meet.MeetFragment
 import com.loftechs.sample.profile.SettingFragment
 
 class MainFragment : AbstractFragment(), MainContract.View {
@@ -47,6 +48,10 @@ class MainFragment : AbstractFragment(), MainContract.View {
 
     private val createCallFragment: CreateCallFragment by lazy {
         CreateCallFragment.newInstance
+    }
+
+    private val meetFragment: MeetFragment by lazy {
+        MeetFragment.newInstance
     }
 
     companion object {
@@ -155,5 +160,9 @@ class MainFragment : AbstractFragment(), MainContract.View {
 
     override fun gotoCreateCall() {
         changeFragment(createCallFragment, arguments)
+    }
+
+    override fun gotoMeet() {
+        changeFragment(meetFragment, arguments)
     }
 }

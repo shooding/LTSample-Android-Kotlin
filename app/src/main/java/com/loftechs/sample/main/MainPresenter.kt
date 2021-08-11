@@ -25,12 +25,13 @@ class MainPresenter : MainContract.Presenter<MainContract.View> {
     private val mFragmentTypeList: ArrayList<MainItemType> by lazy {
         arrayListOf(
                 MainItemType.CHAT,
-                MainItemType.CALL
+                MainItemType.CALL,
+                MainItemType.Meet
         )
     }
 
     override val tabItemCount: Int
-        get() = 2
+        get() = 3
 
     companion object {
         private val TAG = MainPresenter::class.java.simpleName
@@ -113,6 +114,9 @@ class MainPresenter : MainContract.Presenter<MainContract.View> {
             1 -> {
                 R.string.main_tab_item_call
             }
+            2 -> {
+                R.string.main_tab_item_meet
+            }
             else -> {
                 0
             }
@@ -126,6 +130,9 @@ class MainPresenter : MainContract.Presenter<MainContract.View> {
             }
             1 -> {
                 R.drawable.ic_action_new_call
+            }
+            2 -> {
+                R.drawable.ic_action_new_call //TODO ic_action_new_meet
             }
             else -> {
                 0

@@ -8,6 +8,7 @@ interface MainContract {
     interface View {
         fun gotoCreateChannel()
         fun gotoCreateCall()
+        fun gotoMeet()
     }
 
     interface Presenter<T> : BaseContract.Presenter<T> {

@@ -1,6 +1,7 @@
 package com.loftechs.sample.model
 
 import android.net.Uri
+import com.google.common.base.Strings
 import com.loftechs.sample.extensions.logDebug
 import com.loftechs.sample.extensions.writeToImage
 import com.loftechs.sample.model.api.ChatFlowManager
@@ -18,8 +19,10 @@ import java.io.File
 object AvatarManager {
 
     fun loadAvatar(receiverID: String, fileInfo: LTFileInfo?): Observable<Uri> {
+
         return fileInfo?.let {
-            if(!it.isExist) {
+            if(Strings.isNullOrEmpty(it.filename) || Strings.isNullOrEmpty(it.remoteFilePath)) {
+                // sdk 5.1.x ~ 5.2.x 版本相容性問題, isExist() 方法不存在, 故使用Strings進行判斷
                 Observable.error(Throwable("loadAvatar fileInfo is not exist."))
             } else {
                 val localFile = FileUtil.getProfileFile(it.filename, true)

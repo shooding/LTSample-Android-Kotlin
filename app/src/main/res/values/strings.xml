@@ -17,6 +17,7 @@
     <!--    region Main page -->
     <string name="main_tab_item_chat">Chat</string>
     <string name="main_tab_item_call">Call</string>
+    <string name="main_tab_item_meet">Meet</string>
     <string name="main_tab_menu_item_new_group">New Group</string>
     <string name="main_tab_menu_item_setting">Setting</string>
     <string name="main_tab_menu_item_log_out">Log Out</string>

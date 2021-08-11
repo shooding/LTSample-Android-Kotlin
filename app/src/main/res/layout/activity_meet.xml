@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".meet.MeetActivity">
+
+    <TextView
+        android:id="@+id/call_userid_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="12dp"
+        android:gravity="center_vertical|start"
+        android:text="Call userID:"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/meet_id" />
+
+    <EditText
+        android:id="@+id/call_userid"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginEnd="48dp"
+        android:autofillHints=""
+        android:hint="Enter userID you want to call"
+        android:minHeight="56dp"
+        android:text="axuyja6ycqcaanj7"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/call_userid_tv" />
+
+    <TextView
+        android:id="@+id/iampublic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="48dp"
+        android:gravity="center_vertical|start"
+        android:text="Public/Private?"
+        android:textSize="18sp"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/ispublic_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="108dp"
+        android:text="Public"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/iampublic"
+        app:layout_constraintStart_toEndOf="@+id/iam"
+        app:layout_constraintTop_toTopOf="@+id/iampublic"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Switch
+        android:id="@+id/id_ispublic_switch"
+        style="@style/Theme.App"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        app:layout_constraintBottom_toBottomOf="@+id/iampublic"
+        app:layout_constraintEnd_toEndOf="@+id/name"
+        app:layout_constraintTop_toTopOf="@+id/iampublic"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+    <TextView
+        android:id="@+id/iam"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="15dp"
+        android:gravity="center_vertical|start"
+        android:text="I am:"
+        android:textSize="18sp"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iampublic" />
+
+    <TextView
+        android:id="@+id/id_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="Host"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/iam"
+        app:layout_constraintStart_toEndOf="@+id/iam"
+        app:layout_constraintTop_toTopOf="@+id/iam" />
+
+
+    <Switch
+        android:id="@+id/id_switch"
+        style="@style/Theme.App"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        app:layout_constraintBottom_toBottomOf="@id/iam"
+        app:layout_constraintEnd_toEndOf="@+id/name"
+        app:layout_constraintTop_toTopOf="@+id/iam"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+
+    <TextView
+        android:id="@+id/name_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center_vertical|start"
+        android:text="Name:"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iam" />
+
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginEnd="48dp"
+        android:hint="Enter name"
+        android:minHeight="56dp"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name_tv"
+        android:autofillHints="" />
+
+    <TextView
+        android:id="@+id/meet_id_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center_vertical|start"
+        android:text="MeetID:"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/name" />
+
+    <EditText
+        android:id="@+id/meet_id"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginEnd="48dp"
+        android:autofillHints=""
+        android:hint="Enter MeetID"
+        android:minHeight="56dp"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/meet_id_tv" />
+
+    <Button
+        android:id="@+id/enter_meeting_btn"
+        android:layout_width="0dp"
+        android:layout_height="96dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="200dp"
+        android:layout_marginEnd="48dp"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
