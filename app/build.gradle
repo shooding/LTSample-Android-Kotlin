@@ -23,11 +23,6 @@ allprojects {
     repositories {
         // Check that you have the following line (if not, add it):
         google()  // Google's Maven repository
-
-        // shooding 在正式release com.loftechs.core.core-meet-sdk 2.8.2 前, 在本地開發需要引用 local maven
-        maven {
-            url "file:/Users/shooding/repo"
-        }
     }
 }
 //LTSDK
